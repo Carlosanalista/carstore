@@ -1,14 +1,14 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Lista dos Carros</ion-title>
+    <ion-title text-center><h3>Lista dos Carros</h3></ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
   <ion-list>
-    <ion-item class="table-header" color="light">
+    <ion-item class="input-full-width" color="Medium">
       <ion-label text-wrap>
         <ion-row no-padding>
           <ion-col no-padding>
@@ -27,26 +27,26 @@
       </ion-label>
     </ion-item>
     <ion-item ion-button *ngFor="let g of carroList; let i = index">
-      <ion-label text-wrap>
-        <ion-row no-padding>
-          <ion-col no-padding>
+      <ion-label>
+        <ion-row>
+          <ion-col>
             <ion-text color="primary">
               <h3>{{ g.nome | titlecase}}</h3>
             </ion-text>
           </ion-col>
-          <ion-col no-padding>
+          <ion-col>
             <p>{{ g.marca | uppercase }}</p>
           </ion-col>
-          <ion-col no-padding>
+          <ion-col>
             <p>{{ g.datafabricacao | date:'dd/MM/yyyy' }}</p>
           </ion-col>
-          <ion-col no-padding>
+          <ion-col>
             <p>R$ {{ g.preco | number:'1.2-2':'pt' }}</p>
           </ion-col>
-          <ion-button fill="clear" color="success" (click)="openEdit(g,i)">
+          <ion-button fill="outline" color="Tertiary" (click)="openEdit(g,i)">
             <ion-icon slot="icon-only" name="md-create"></ion-icon>
           </ion-button>
-          <ion-button fill="clear" color="danger" (click)="removeItem(g,i)">
+          <ion-button fill="solid" color="danger" (click)="removeItem(g,i)">
             <ion-icon slot="icon-only" name="md-remove-circle"></ion-icon>
           </ion-button>
         </ion-row>

@@ -1,22 +1,22 @@
-<ion-app>
+<ion-content>
     <ion-split-pane>
         <ion-menu side="start">
             <ion-header translucent>
-              <ion-toolbar color="secondary">
+              <ion-toolbar color="dark">
                 <ion-title>Car Store</ion-title>
               </ion-toolbar>
             </ion-header>
             <ion-content>
               <ion-list>
                 <ion-item>
-                    <ion-button color="secondary" (click)="goTo('cadastrar')"> Cadastrar</ion-button>
+                    <ion-button color="dark" shape="round" (click)="goTo('cadastrar')"> Cadastrar</ion-button>
                 </ion-item>
                 <ion-item>                  
-                    <ion-button color="secondary" (click)="goTo('listar')"> Listar</ion-button>
+                    <ion-button color="dark" shape="round" (click)="goTo('listar')"> Listar</ion-button>
                 </ion-item>
               </ion-list>
             </ion-content>
           </ion-menu> 
           <ion-router-outlet></ion-router-outlet>
-        </ion-split-pane>
-      </ion-app>
+      </ion-split-pane>
+  </ion-content>
