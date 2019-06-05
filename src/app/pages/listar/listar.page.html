@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lista dos Carros</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item class="table-header" color="light">
+      <ion-label text-wrap>
+        <ion-row no-padding>
+          <ion-col no-padding>
+            <b>Nome</b>
+          </ion-col>
+          <ion-col no-padding>
+            <b>Marca</b>
+          </ion-col>
+          <ion-col no-padding>
+            <b>Data Fabricação</b>
+          </ion-col>
+          <ion-col no-padding>
+            <b>Preço</b>
+          </ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+    <ion-item ion-button *ngFor="let g of carroList; let i = index">
+      <ion-label text-wrap>
+        <ion-row no-padding>
+          <ion-col no-padding>
+            <ion-text color="primary">
+              <h3>{{ g.nome | titlecase}}</h3>
+            </ion-text>
+          </ion-col>
+          <ion-col no-padding>
+            <p>{{ g.marca | uppercase }}</p>
+          </ion-col>
+          <ion-col no-padding>
+            <p>{{ g.datafabricacao | date:'dd/MM/yyyy' }}</p>
+          </ion-col>
+          <ion-col no-padding>
+            <p>R$ {{ g.preco | number:'1.2-2':'pt' }}</p>
+          </ion-col>
+          <ion-button fill="clear" color="success" (click)="openEdit(g,i)">
+            <ion-icon slot="icon-only" name="md-create"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" color="danger" (click)="removeItem(g,i)">
+            <ion-icon slot="icon-only" name="md-remove-circle"></ion-icon>
+          </ion-button>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

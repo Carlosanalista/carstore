@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar Carro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card text-center>
+    <ion-card-header>
+      Dados cadastrais
+    </ion-card-header>
+    <ion-row>
+      <ion-col>
+        <form [formGroup]="cadastroForm">
+          <ion-row>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <input matInput type="text" name="nome" placeholder="Nome do Carro" formControlName="nome">
+            </mat-form-field>
+          </ion-row>
+          <ion-row>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-select formControlName="marca">
+                <mat-option label="Selecione">Selecione</mat-option>
+                <mat-option value="Toyota">Toyota</mat-option>
+                <mat-option value="Volkswagen">Volkswagen</mat-option>
+                <mat-option value="Ford">Ford</mat-option>
+                <mat-option value="Nissan">Nissan</mat-option>
+                <mat-option value="Honda">Honda</mat-option>
+                <mat-option value="Hyundai">Hyundai</mat-option>
+                <mat-option value="Chevrolet">Chevrolet</mat-option>
+                <mat-option value="Kia">Kia</mat-option>
+                <mat-option value="Fiat">Fiat</mat-option>
+                <mat-option value="Renault">Renault</mat-option>
+                <mat-option value="Peugeot">Peugeot</mat-option>
+                <mat-option value="BMW">BMW</mat-option>
+                <mat-option value="Audi">Audi</mat-option>
+                <mat-option value="Jeep">Jeep</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </ion-row>
+          <ion-row>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <input matInput type="date" name="nome" placeholder="Nome do Carro" formControlName="datafabricacao">
+            </mat-form-field>
+          </ion-row>
+          <ion-row>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <input matInput type="number" name="nome" placeholder="Preço" formControlName="preco">
+            </mat-form-field>
+          </ion-row>
+        </form>
+        <ion-button (click)="save()">
+          <ion-icon name="md-save"></ion-icon> Salvar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
