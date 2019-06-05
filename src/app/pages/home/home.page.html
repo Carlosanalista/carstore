@@ -3,41 +3,20 @@
         <ion-menu side="start">
             <ion-header translucent>
               <ion-toolbar color="secondary">
-                <ion-title>Menu</ion-title>
+                <ion-title>Car Store</ion-title>
               </ion-toolbar>
             </ion-header>
-            <ion-content><ion-list><ion-item>he vik</ion-item></ion-list></ion-content>
-          </ion-menu>
+            <ion-content>
+              <ion-list>
+                <ion-item>
+                    <ion-button color="secondary" (click)="goTo('cadastrar')"> Cadastrar</ion-button>
+                </ion-item>
+                <ion-item>                  
+                    <ion-button color="secondary" (click)="goTo('listar')"> Listar</ion-button>
+                </ion-item>
+              </ion-list>
+            </ion-content>
+          </ion-menu> 
           <ion-router-outlet></ion-router-outlet>
-
         </ion-split-pane>
-</ion-app>
-  <!--
-  <ion-card-header>
-    <ion-card-title>Car Store</ion-card-title>
-  </ion-card-header>
-
-<ion-content>
-
-  <div class="ion-content">
-    <ion-row justify-content-center>
-      <ion-col size="2">
-        <ion-card (click)="goTo('cadastrar')" text-center>
-          <h1 >
-            Cadastrar
-          </h1>
-          <ion-icon  name="md-add"></ion-icon>
-        </ion-card>
-      </ion-col>
-      <ion-col size="2">
-        <ion-card (click)="goTo('listar')" text-center>
-          <h1 >
-            Listar
-          </h1>
-          <ion-icon   name="md-list"></ion-icon>
-
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </div>
-</ion-content>-->
+      </ion-app>
